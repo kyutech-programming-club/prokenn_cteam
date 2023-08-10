@@ -8,7 +8,7 @@ public class lanking : MonoBehaviour
 {
 
     public string currentUserName;
-
+    public bool key;
     [SerializeField]
     int score = 100;
     NCMBObject data = new NCMBObject("data");
@@ -16,13 +16,14 @@ public class lanking : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        key = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.Return)){
+        if(Input.GetKey(KeyCode.Return) && !key){
+            key = true;
             Debug.Log("スペースキーが押されました。");
 
         // NCMBUser currentUser = NCMBUser.CurrentUser;
