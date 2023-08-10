@@ -228,9 +228,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 902212676}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b39f371823584643ac4594bc9cdc09f, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d88078f4b8384845b4f8d78bc01c8c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentUserName: Shion
+  score: 100
 --- !u!1 &1092668023
 GameObject:
   m_ObjectHideFlags: 0
