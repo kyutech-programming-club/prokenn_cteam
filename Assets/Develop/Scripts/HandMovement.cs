@@ -15,6 +15,6 @@ public class HandMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rigidBody2D.velocity = power * transform.right * Mathf.Sin(Time.time);
+        rigidBody2D.velocity = power * transform.right * Mathf.Cos(Time.time);
     }
 }
