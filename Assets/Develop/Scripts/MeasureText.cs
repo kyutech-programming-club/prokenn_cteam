@@ -11,7 +11,7 @@ public class MeasureText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _player = GameObject.Find("Player");
+        _player = GameObject.FindWithTag("Player");
         _text = GetComponent<Text>();
     }
 

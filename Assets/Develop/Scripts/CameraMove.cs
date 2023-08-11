@@ -8,7 +8,7 @@ public class CameraMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _player = GameObject.Find("Player");
+        _player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
@@ -16,12 +16,12 @@ public class CameraMove : MonoBehaviour
     {
         if(_player.transform.position.y < -0.5f)
         {
-            transform.position = new Vector3(transform.position.x, _player.transform.position.y +0.5f, transform.position.z);
+            transform.position = new Vector3(_player.transform.position.x, _player.transform.position.y +0.5f, transform.position.z);
         }
     }
 
     public void PushReset()
     {
-        transform.position = new Vector3(transform.position.x, 0, transform.position.z);
+        transform.position = new Vector3(0, 0, transform.position.z);
     }
 }

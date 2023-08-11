@@ -5,27 +5,23 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    private Dropdown _stageSelect;
     private Rigidbody2D _rigidbody;
+    private GameObject[] _children;
 
     void Start()
     {
-        _stageSelect = GameObject.Find("StageDropdown").GetComponent<Dropdown>();
         _rigidbody = GetComponent<Rigidbody2D>();
+        _children = GameObject.FindGameObjectsWithTag("playerchildren");
+        _rigidbody.isKinematic = true;
     }
- 
-    void Update()
-    {
-        //重力加速度の変更
-        if(_stageSelect.value == 0)
-        {
-            _rigidbody.gravityScale = 9.8f;
-        }
-        else if(_stageSelect.value == 1)
-        {
-            _rigidbody.gravityScale = 1.62f;
-        }
 
+    public void SetGravity(float stage)
+    {
+        _rigidbody.gravityScale = stage;
+        foreach (GameObject child in _children)
+        {
+            child.GetComponent<Rigidbody2D>().gravityScale = stage;
+        }
     }
 
     public void PushStart()
@@ -45,6 +41,6 @@ public class Player : MonoBehaviour
         _rigidbody.velocity = Vector2.zero;
         _rigidbody.angularVelocity = 0;
         transform.position = new Vector3(0, 0, 100);
-        _rigidbody.isKinematic = false;
+        _rigidbody.isKinematic = true;
     }
 }
