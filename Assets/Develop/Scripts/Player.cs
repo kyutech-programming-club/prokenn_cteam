@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _children = GameObject.FindGameObjectsWithTag("playerchildren");
-        _rigidbody.isKinematic = true;
+        // _rigidbody.isKinematic = true;
     }
 
     public void SetGravity(float stage)
@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
     {
         _rigidbody.isKinematic = false;
     }
-    
+
     public void PushStop()
     {
         _rigidbody.velocity = Vector2.zero;
