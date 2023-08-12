@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PracticeScene.unity
     guid: 323250a662db3ac438af086464130a20
+  - enabled: 1
+    path: Assets/Scenes/lanking.unity
+    guid: a1a07ef0414a22140b4361a8979c261b
   m_configObjects: {}

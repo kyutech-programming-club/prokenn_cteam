@@ -2648,6 +2648,7 @@ GameObject:
   - component: {fileID: 1596032934}
   - component: {fileID: 1596032936}
   - component: {fileID: 1596032937}
+  - component: {fileID: 1596032938}
   m_Layer: 0
   m_Name: Controller
   m_TagString: GameController
@@ -2710,6 +2711,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d14bd6b95617da44780abd4f318d8ed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1596032938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596032933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90aa27c62d218184380d19c2f498a896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _font: {fileID: 12800000, guid: cda9f2e85656c461da598b1877f2b404, type: 3}
+  _textObjects:
+  - {fileID: 908156576}
+  - {fileID: 1036486453}
+  - {fileID: 245526876}
+  - {fileID: 1285355326}
+  - {fileID: 1194980694}
+  - {fileID: 1427171477}
+  - {fileID: 1347629311}
+  - {fileID: 1821029798}
+  - {fileID: 4903736}
+  _color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1611003835
 GameObject:
   m_ObjectHideFlags: 0
