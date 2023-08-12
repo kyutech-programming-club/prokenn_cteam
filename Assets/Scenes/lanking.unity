@@ -221,6 +221,7 @@ GameObject:
   - component: {fileID: 131504190}
   - component: {fileID: 131504189}
   - component: {fileID: 131504191}
+  - component: {fileID: 131504192}
   m_Layer: 0
   m_Name: lanking
   m_TagString: Untagged
@@ -272,6 +273,19 @@ MonoBehaviour:
   - {fileID: 2106582976}
   - {fileID: 1192001709}
   _color: {r: 0.3767355, g: 0.39793575, b: 0.4811321, a: 1}
+--- !u!114 &131504192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131504188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97bb735aa284f234b8c51e1cf1a3f6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scene: Title
 --- !u!1 &221014892 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8075641230751833682, guid: eee35ba483d2b4939addbe7488236a30,
