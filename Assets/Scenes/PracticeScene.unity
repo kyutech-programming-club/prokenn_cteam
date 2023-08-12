@@ -590,30 +590,12 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &485587966 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8075641230854528804, guid: eee35ba483d2b4939addbe7488236a30,
-    type: 3}
-  m_PrefabInstance: {fileID: 665314169}
-  m_PrefabAsset: {fileID: 0}
 --- !u!50 &485587967 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 8075641230854528800, guid: eee35ba483d2b4939addbe7488236a30,
     type: 3}
   m_PrefabInstance: {fileID: 665314169}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &485587970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485587966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb85d2be1070d5e439227c4e94358e6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &591752061
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,21 +763,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8075641230277105770, guid: eee35ba483d2b4939addbe7488236a30,
-        type: 3}
-      propertyPath: m_TagString
-      value: playerchildren
-      objectReference: {fileID: 0}
-    - target: {fileID: 8075641230751833682, guid: eee35ba483d2b4939addbe7488236a30,
-        type: 3}
-      propertyPath: m_TagString
-      value: playerchildren
-      objectReference: {fileID: 0}
-    - target: {fileID: 8075641230820551454, guid: eee35ba483d2b4939addbe7488236a30,
-        type: 3}
-      propertyPath: m_TagString
-      value: playerchildren
-      objectReference: {fileID: 0}
     - target: {fileID: 8075641230854528802, guid: eee35ba483d2b4939addbe7488236a30,
         type: 3}
       propertyPath: m_RootOrder
@@ -855,16 +822,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Character
-      objectReference: {fileID: 0}
-    - target: {fileID: 8075641230854528804, guid: eee35ba483d2b4939addbe7488236a30,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8075641232002922466, guid: eee35ba483d2b4939addbe7488236a30,
-        type: 3}
-      propertyPath: m_TagString
-      value: playerchildren
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eee35ba483d2b4939addbe7488236a30, type: 3}
