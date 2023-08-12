@@ -17,7 +17,7 @@ public class display : MonoBehaviour
 
         NCMBQuery<NCMBObject> query = new NCMBQuery<NCMBObject>("data");
 
-        query.OrderByDescending ("score");
+        query.OrderByAscending ("score");
 
         query.Limit = 3;
 
@@ -32,7 +32,8 @@ public class display : MonoBehaviour
                     {
                         count++;
                         //★ユーザーネームとスコアを画面表示
-                        tempScore += count.ToString() + "位：" + obj ["UserName"] + " スコア：" + obj ["score"] + "\r\n";
+                        //tempScore += count.ToString() + "位：" + obj ["UserName"] + " スコア：" + obj ["score"] + "\r\n";
+                        tempScore += count.ToString() + " スコア：" + obj ["score"] + "\r\n";
                     }
                     targetText.GetComponent<Text>().text = tempScore;
                 }                     

@@ -16,6 +16,7 @@ public class lanking : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        score = PlayerPrefs.GetInt("Score");
         key = false;
     }
 
