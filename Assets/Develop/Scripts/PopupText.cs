@@ -9,25 +9,24 @@ public class PopupText : MonoBehaviour
     [SerializeField] float _speed = 0.5f;
     private GameDirector _gameDirector;
     [SerializeField] private Text _text;
-    private float _transformy;
+    private float _transformY;
+
+    void Awake()
+    {
+        _gameDirector = GameObject.FindWithTag("GameController").GetComponent<GameDirector>();
+        _transformY = transform.position.y;
+        transform.position = new Vector3(transform.position.x, _transformY + 1000, transform.position.z);
+    }
 
     // Start is called before the first frame update
     void Start()
-    {
-        _gameDirector = GameObject.FindWithTag("GameController").GetComponent<GameDirector>();
-        _transformy = transform.position.y;
-        transform.position = new Vector3(transform.position.x, _transformy + 1000, transform.position.z);
-
+    {   
+        _text.text = _gameDirector.TagetMeasure.ToString() + "mで止めろ！";
+        transform.DOMoveY(_transformY, _speed);
         DOVirtual.DelayedCall(4.0f, () =>
         {
-            transform.DOMoveY(_transformy + 1000, _speed);
+            transform.DOMoveY(_transformY + 1000, _speed);
         });
-    }
-
-    public void Start_(int taget)
-    {
-        _text.text = taget.ToString() + "mで止めろ！";
-        transform.DOMoveY(_transformy, _speed);
     }
 
     // Update is called once per frame

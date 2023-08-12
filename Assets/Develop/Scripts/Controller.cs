@@ -5,11 +5,14 @@ using UnityEngine;
 public class Controller : MonoBehaviour
 {
     private GameObject _player;
+    private GameDirector _gameDirector;
+    [SerializeField] private Result _result;
     [SerializeField] private bool _isStop;
     // Start is called before the first frame update
     void Start()
     {
         _player = GameObject.FindWithTag("Player");
+        _gameDirector = GameObject.FindWithTag("GameController").GetComponent<GameDirector>();
         _isStop = true;
     }
 
@@ -27,6 +30,8 @@ public class Controller : MonoBehaviour
             else
             {
                 _player.GetComponent<Player>().PushStop();
+                _gameDirector.GameStop();
+                _result.GameStop();
             }
         }
     }
