@@ -5,74 +5,29 @@ using UnityEngine;
 public class Controller : MonoBehaviour
 {
     private GameObject _player;
-    //private GameObject _floor;
-    private GameObject _camera;
-    [SerializeField] private bool _isStop = false;
-    [SerializeField] private bool _isMouse = false;
+    [SerializeField] private bool _isStop;
     // Start is called before the first frame update
     void Start()
     {
         _player = GameObject.FindWithTag("Player");
-        //_floor = GameObject.Find("StartFloor");
-        _camera = GameObject.Find("Main Camera");
+        _isStop = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Ray
-        if (Input.GetMouseButtonUp(0))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast((Vector2)ray.origin, (Vector2)ray.direction);
-            if (!hit || hit.transform.gameObject.tag != "UI")
-            {
-                StartStop();
-            }
-        }
-
         //controller
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) || _isMouse)
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Mouse0))
         {
-            StartStop();
-        }
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            PushReset();
-        }
-    }
-
-    void StartStop()
-    {
-        if (_isStop)
+            if (_isStop)
             {
-                PushStart();
+                _isStop = false;
+                _player.GetComponent<Player>().PushStart();
             }
             else
             {
-                PushStop();
+                _player.GetComponent<Player>().PushStop();
             }
-    }
-
-    public void PushStart()
-    {
-        _isStop = false;
-        //_floor.GetComponent<Floor>().PushStart();
-        _player.GetComponent<Player>().PushStart();
-    }
-
-    public void PushReset()
-    {
-        _isStop = true;
-        //_floor.GetComponent<Floor>().PushReset();
-        _player.GetComponent<Player>().PushReset();
-        _camera.GetComponent<CameraMove>().PushReset();
-    }
-
-    public void PushStop()
-    {
-        _isStop = true;
-        _player.GetComponent<Player>().PushStop();
+        }
     }
 }

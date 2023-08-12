@@ -5,7 +5,9 @@ using DG.Tweening;
 
 public class GameDirector : MonoBehaviour
 {
-    private Player _player ;
+    private Player _player;
+    [SerializeField] private UIText _uiText;
+    [SerializeField] private PopupText _popupText;
     public int TagetMeasure { get; private set; }
     private int _stageSelect;
     private float[] _stages;
@@ -23,6 +25,9 @@ public class GameDirector : MonoBehaviour
         DOVirtual.DelayedCall(0.1f, () =>
         {
             _player.SetGravity(_stages[_stageSelect]);
+            _uiText.SetTagetText(TagetMeasure);
+            _popupText.Start_(TagetMeasure);
+
         });
 
         Debug.Log("目標距離は" + TagetMeasure + "m");
